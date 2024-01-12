@@ -7,6 +7,8 @@ export default defineEventHandler(async(event)=>{
 
     const { username, password, repeatPassword, email, name } = body;
 
+    console.log(JSON.stringify(body));
+
     if(!username || !password || !repeatPassword || !email || !name){
         return sendError(event, createError({statusCode:400, statusMessage: 'invalid params'}));
     }

@@ -8,5 +8,20 @@ export default defineNuxtConfig({
     cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME,
     cloudinaryApiKey: process.env.CLOUDINARY_API_KEY,
     cloudinaryApiSecret: process.env.CLOUDINARY_API_SECRET,
+  },
+  app: {
+    head: {
+      __dangerouslyDisableSanitizers: ["script"],
+    script: [
+      {
+        hid: "FUNCTION_NAME",
+        src: "newrelic.js",
+        defer: true,
+        type: "text/javascript",
+        charset: "utf-8",
+      },
+    ],
+    },
   }
+
 });

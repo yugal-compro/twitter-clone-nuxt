@@ -110,7 +110,7 @@ const whoToFollowItems = ref([
     },
     {
         name: 'Yugal',
-        handle: '@king',
+        handle: '@yugal17v',
         image: 'https://picsum.photos/200/200'
     },
     {
